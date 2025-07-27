@@ -2,19 +2,19 @@ let currentSlideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 
-// Belirli bir slide'ı göster
+// Show specific slide
 function showSlide(index) {
-    // Tüm slide'ları gizle
+    // Hide all slides
     slides.forEach(slide => {
         slide.classList.remove('active');
     });
     
-    // Tüm dot'ları pasif yap
+    // Deactivate all dots
     dots.forEach(dot => {
         dot.classList.remove('active');
     });
     
-    // Index kontrolü
+    //  Index validation
     if (index >= slides.length) {
         currentSlideIndex = 0;
     }
@@ -22,7 +22,7 @@ function showSlide(index) {
         currentSlideIndex = slides.length - 1;
     }
     
-    // Seçilen slide ve dot'ı aktif yap
+    // Activate selected slide and dot
     if (slides[currentSlideIndex]) {
         slides[currentSlideIndex].classList.add('active');
     }
@@ -31,19 +31,19 @@ function showSlide(index) {
     }
 }
 
-// Slide değiştir (önceki/sonraki)
+// Change slide (previous/next)
 function changeSlide(direction) {
     currentSlideIndex += direction;
     showSlide(currentSlideIndex);
 }
 
-// Belirli slide'a git (dot'lara tıklayınca)
+// Go to specific slide (on dot click)
 function currentSlide(index) {
     currentSlideIndex = index - 1;
     showSlide(currentSlideIndex);
 }
 
-// Otomatik slide değişimi (5 saniyede bir)
+// Auto slide change (every 5 seconds)
 function autoSlide() {
     currentSlideIndex++;
     showSlide(currentSlideIndex);
@@ -51,7 +51,7 @@ function autoSlide() {
 
 // ===== SKILL PROGRESS ANIMATION =====
 
-// Scroll olduğunda skill barları animate et
+//Animate skill bars on scroll
 function animateSkills() {
     const skillBars = document.querySelectorAll('.skill-progress');
     
@@ -60,7 +60,7 @@ function animateSkills() {
         const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
         
         if (isVisible) {
-            // Skill bar animasyonunu başlat
+            //  Start the skill bar animation
             bar.style.animation = 'none';
             bar.offsetHeight; // Reflow tetikle
             bar.style.animation = null;
@@ -70,7 +70,7 @@ function animateSkills() {
 
 // ===== SMOOTH SCROLL NAVİGASYON =====
 
-// Navbar linklerine smooth scroll ekle
+// Add smooth scroll to navbar links
 function initSmoothScroll() {
     const navLinks = document.querySelectorAll('a[href^="#"]');
     
@@ -93,7 +93,7 @@ function initSmoothScroll() {
 
 // ===== PARALLAX EFFECT =====
 
-// Hero section için parallax effect
+//  Parallax effect for the hero section
 function initParallax() {
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
@@ -108,7 +108,7 @@ function initParallax() {
 
 // ===== NAVBAR SCROLL EFFECT =====
 
-// Scroll olduğunda navbar arka planını değiştir
+// Change the navbar background on scroll
 function initNavbarScroll() {
     const navbar = document.querySelector('.navbar');
     
@@ -125,7 +125,7 @@ function initNavbarScroll() {
 
 // ===== LAZY LOADING İÇİN INTERSECTION OBSERVER =====
 
-// Resimleri lazy load et
+// Lazy load images
 function initLazyLoading() {
     const images = document.querySelectorAll('img[loading="lazy"]');
     
@@ -144,7 +144,7 @@ function initLazyLoading() {
 
 // ===== KEYBOARD NAVİGASYON =====
 
-// Klavye ile slideshow kontrolü
+//Keyboard slideshow control
 function initKeyboardNavigation() {
     document.addEventListener('keydown', (e) => {
         switch(e.key) {
@@ -164,7 +164,7 @@ function initKeyboardNavigation() {
 
 // ===== FORM VALİDASYON (GDPR İÇİN) =====
 
-// Contact form validation (eğer form eklenirse)
+// Contact form validation 
 function initFormValidation() {
     const forms = document.querySelectorAll('form');
     
@@ -172,7 +172,7 @@ function initFormValidation() {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Basit validation
+            // Basic validation
             const inputs = form.querySelectorAll('input[required], textarea[required]');
             let isValid = true;
             
@@ -196,9 +196,9 @@ function initFormValidation() {
     });
 }
 
-// ===== ERİŞİLEBİLİRLİK (ACCESSIBILITY) =====
+// =====  (ACCESSIBILITY) =====
 
-// Focus trap için
+// For focus trap
 function initAccessibility() {
     // Skip to main content link
     const skipLink = document.createElement('a');
@@ -237,7 +237,7 @@ function initThemeToggle() {
     const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
     
-    // Theme toggle button (navbar'a eklenebilir)
+    // Theme toggle button 
     const themeToggle = document.createElement('button');
     themeToggle.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
     themeToggle.style.cssText = `
@@ -259,7 +259,7 @@ function initThemeToggle() {
         themeToggle.innerHTML = newTheme === 'dark' ? '☀️' : '🌙';
     });
     
-    // Navbar'a ekle (opsiyonel)
+    // Add it to the navbar (optional)
     const navbar = document.querySelector('.nav-links');
     if (navbar) {
         const li = document.createElement('li');
@@ -270,14 +270,14 @@ function initThemeToggle() {
 
 // ===== PERFORMANCE MONİTÖRİNG =====
 
-// Sayfa yükleme performansını ölç
+// Measure page load performance
 function initPerformanceMonitoring() {
     window.addEventListener('load', () => {
         // Performance API kullanarak yükleme süresini ölç
         const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
         console.log(`Sayfa yükleme süresi: ${loadTime}ms`);
         
-        // Core Web Vitals için LCP ölçümü
+        //  LCP measurement for Core Web Vitals
         new PerformanceObserver((list) => {
             for (const entry of list.getEntries()) {
                 console.log('LCP:', entry.startTime);
@@ -286,18 +286,18 @@ function initPerformanceMonitoring() {
     });
 }
 
-// ===== SAYFA YÜKLENDİĞİNDE ÇALIŞTIR =====
+// =====  RUN WHEN DOM IS LOADED =====
 
-// DOM yüklendiğinde tüm fonksiyonları başlat
+//  Initialize all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Slideshow'u başlat
+    // Start the slideshow
     if (slides.length > 0) {
         showSlide(0);
-        // Otomatik slide (5 saniyede bir)
+        // Auto slide (every 5 seconds)
         setInterval(autoSlide, 5000);
     }
     
-    // Diğer fonksiyonları başlat
+    // Start other functions
     initSmoothScroll();
     initParallax();
     initNavbarScroll();
@@ -307,45 +307,43 @@ document.addEventListener('DOMContentLoaded', () => {
     initAccessibility();
     initPerformanceMonitoring();
     
-    // Theme toggle'ı başlat (opsiyonel)
-    // initThemeToggle();
-    
+    //Initialize theme toggle (optional)
     console.log('🚀 Portfolio loaded successfully!');
 });
 
-// ===== SCROLL EVENTLERİ =====
+// ===== SCROLL EVENTS =====
 
-// Scroll olaylarını dinle
+// Listen to scroll events
 window.addEventListener('scroll', () => {
     animateSkills();
 });
 
-// ===== RESIZE EVENTLERİ =====
+// ===== RESIZE EVENTS =====
 
-// Pencere boyutu değiştiğinde responsive adjustments
+// Responsive adjustments on window resize
 window.addEventListener('resize', () => {
-    // Slideshow boyutlarını ayarla
+    // Adjust slideshow size
     const slideContainer = document.querySelector('.slideshow-container');
     if (slideContainer && window.innerWidth < 768) {
         slideContainer.style.maxWidth = '100%';
     }
 });
 
-// ===== HATA YÖNETİMİ =====
+// ===== ERROR HANDLING =====
 
-// Global hata yakalama
+// Global error handling
 window.addEventListener('error', (e) => {
     console.error('JavaScript Hatası:', e.error);
 });
 
-// Unhandled promise rejection yakalama
+//  Capture unhandled promise rejections
 window.addEventListener('unhandledrejection', (e) => {
     console.error('Promise Hatası:', e.reason);
 });
 
 // ===== GDPR COOKIE BANNER (BONUS) =====
 
-// GDPR uyumluluğu için cookie banner
+// Cookie banner for GDPR compliance
 function initGDPRBanner() {
     if (!localStorage.getItem('cookies-accepted')) {
         const banner = document.createElement('div');
@@ -387,7 +385,7 @@ function initGDPRBanner() {
     }
 }
 
-// Cookie kabul fonksiyonları
+// Cookie acceptance functions
 function acceptCookies() {
     localStorage.setItem('cookies-accepted', 'true');
     document.querySelector('[style*="position: fixed"][style*="bottom: 0"]').remove();
