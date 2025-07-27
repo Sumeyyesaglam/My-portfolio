@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sümeyye Saglam - Portfolio & CV</title>
+    <meta name="description" content="Mjukvarutestare och Frontend Developer portfolio">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <!-- Semantisk Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Huvudnavigation">
+        <ul class="nav-links">
+            <li><a href="#hero" aria-label="Gå till startsida">Hem</a></li>
+            <li><a href="#about" aria-label="Läs om mig">Om</a></li>
+            <li><a href="#skills" aria-label="Se mina färdigheter">Skills</a></li>
+            <li><a href="#experience" aria-label="Se min karriär">Karriär</a></li>
+            <li><a href="#projects" aria-label="Se mina projekt">Projekt</a></li>
+            <li><a href="#gallery" aria-label="Se bildgalleri">Galleri</a></li>
+            <li><a href="#contact" aria-label="Kontakta mig">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="hero-content">
+            <div class="profile-container floating">
+                <div class="profile-ring">
+                    <img src="img/foto.jpg" alt="Sümeyye Saglam profilbild" class="profile-image">
+                </div>
+            </div>
+            <h1>Sümeyye Saglam</h1>
+            <p class="subtitle">Mjukvarutestare • Frontend Developer • Future Tech Leader</p>
+            <a href="#about" class="glowing-button" aria-label="Upptäck min resa">Upptäck min resa</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section" aria-labelledby="about-title">
+        <h2 id="about-title" class="section-title">Om mig</h2>
+        <article class="glass-card">
+            <p>
+                Jag är en passionerad <strong>mjukvarutestare</strong> som kombinerar teknisk expertis med kreativ problemlösning. 
+                Med bakgrund inom utbildning och nuvarande fokus på <strong>testautomation</strong> och <strong>webbutveckling</strong>, 
+                strävar jag efter att leverera felfria digitala upplevelser som gör skillnad.
+            </p>
+            <p>
+                Min resa inom tech började med en stark grund inom utbildning, där jag utvecklade förmågan att 
+                förklara komplexa koncept på ett enkelt sätt. Nu kombinerar jag denna pedagogiska bakgrund med 
+                teknisk expertis för att skapa robusta testlösningar.
+            </p>
+        </article>
+    </section>
+
+    <!-- Skills Section - CSS Grid -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+        <h2 id="skills-title" class="section-title">Tekniska Superkrafter</h2>
+        <div class="skills-grid">
+            <article class="skill-card">
+                <span class="skill-icon" aria-hidden="true">🤖</span>
+                <h3 class="skill-name">Test Automation</h3>
+                <p>Selenium • JUnit • Robot Framework</p>
+                <div class="skill-level" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-progress" style="width: 85%"></div>
+                </div>
+            </article>
+            <article class="skill-card">
+                <span class="skill-icon" aria-hidden="true">💻</span>
+                <h3 class="skill-name">Programming</h3>
+                <p>Java • Python • JavaScript</p>
+                <div class="skill-level" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-progress" style="width: 80%"></div>
+                </div>
+            </article>
+            <article class="skill-card">
+                <span class="skill-icon" aria-hidden="true">🌐</span>
+                <h3 class="skill-name">Web Technologies</h3>
+                <p>HTML5 • CSS3 • React</p>
+                <div class="skill-level" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+            </article>
+            <article class="skill-card">
+                <span class="skill-icon" aria-hidden="true">⚡</span>
+                <h3 class="skill-name">DevOps & Tools</h3>
+                <p>Azure DevOps • Git • CI/CD</p>
+                <div class="skill-level" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-progress" style="width: 75%"></div>
+                </div>
+            </article>
+            <article class="skill-card">
+                <span class="skill-icon" aria-hidden="true">🎯</span>
+                <h3 class="skill-name">Agile Methods</h3>
+                <p>Scrum • BDD • ATDD</p>
+                <div class="skill-level" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-progress" style="width: 90%"></div>
+                </div>
+            </article>
+            <article class="skill-card">
+                <span class="skill-icon" aria-hidden="true">🌍</span>
+                <h3 class="skill-name">Languages</h3>
+                <p>Svenska • Engelska • Turkiska</p>
+                <div class="skill-level" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                    <div class="skill-progress" style="width: 95%"></div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="section" aria-labelledby="experience-title">
+        <h2 id="experience-title" class="section-title">Min Resa</h2>
+        <div class="timeline">
+            <article class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-dot"></div>
+                    <time datetime="2024">2024 - Nu</time>
+                    <h3>Mjukvarutestare Student</h3>
+                    <p class="workplace">IT-Högskolan, Göteborg</p>
+                    <p>Fördjupar mig i testautomation, Java, Python och agila metoder. Arbetar med verkliga projekt och lär mig branschstandarder.</p>
+                </div>
+            </article>
+            <article class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-dot"></div>
+                    <time datetime="2021">2021</time>
+                    <h3>Utbildningskoordinator</h3>
+                    <p class="workplace">Turkiet</p>
+                    <p>Ledde elevutveckling och dokumentationsprocesser. Utvecklade systematiska tillvägagångssätt för kvalitetssäkring inom utbildning.</p>
+                </div>
+            </article>
+            <article class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-dot"></div>
+                    <time datetime="2018">2018-2020</time>
+                    <h3>Elevcoach & Admin</h3>
+                    <p class="workplace">Turkiet</p>
+                    <p>Stöttade elever och utvecklade effektiva administrativa system. Byggde broar mellan teknik och pedagogik.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Projects Section - CSS Grid -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section-title">Mina Projekt</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">🚀 Test Automation Suite</h3>
+                    <p>Ett komplett automatiseringsramverk byggt med Selenium och Java. Integrerat med CI/CD pipeline för kontinuerlig testning.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">CI/CD</span>
+                    </div>
+                </div>
+            </article>
+            <article class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">🌐 Responsiv Portfolio</h3>
+                    <p>Modern webbplats byggd med HTML5, CSS3 och JavaScript. Fokus på användarupplevelse och responsiv design.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+            </article>
+            <article class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">📱 Bug Tracking System</h3>
+                    <p>Utvecklat ett system för felrapportering med integration till Azure DevOps. Streamlined workflow för utvecklingsteam.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">API</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section - Bildspel för C-betyg -->
+    <section id="gallery" class="section" aria-labelledby="gallery-title">
+        <h2 id="gallery-title" class="section-title">Mitt Arbete i Bilder</h2>
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="img/datornochbord.jpg" alt="Min arbetsplats med kod på skärmen" loading="lazy">
+                <div class="slide-caption">Min utvecklingsmiljö</div>
+            </div>
+            <div class="slide">
+                <img src="img/html.jpg" alt="Automatiserade tester som körs" loading="lazy">
+                <div class="slide-caption">Automatiserad testning i action</div>
+            </div>
+            <div class="slide">
+                <img src="img/kollobration.jpg" alt="Teamwork och agil utveckling" loading="lazy">
+                <div class="slide-caption">Agilt teamarbete</div>
+            </div>
+            <div class="slide">
+                <img src="img/kitap.jpg" alt="working" loading="lazy">
+                <div class="slide-caption">Agilt teamarbete</div>
+            </div>
+            <!-- Navigation arrows -->
+            <button class="slide-nav prev" onclick="changeSlide(-1)" aria-label="Föregående bild">&#10094;</button>
+            <button class="slide-nav next" onclick="changeSlide(1)" aria-label="Nästa bild">&#10095;</button>
+        </div>
+        
+        <!-- Slide indicators -->
+        <div class="slide-dots">
+            <button class="dot active" onclick="currentSlide(1)" aria-label="Visa bild 1"></button>
+            <button class="dot" onclick="currentSlide(2)" aria-label="Visa bild 2"></button>
+            <button class="dot" onclick="currentSlide(3)" aria-label="Visa bild 3"></button>
+            <button class="dot" onclick="currentSlide(4)"></button>
+        </div>
+    </section>
+
+    <!-- Contact Section - Flexbox -->
+    <footer id="contact" class="contact-section" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title">Låt oss bygga framtiden tillsammans</h2>
+        <p>Redo för nästa steg? Jag är alltid öppen för nya möjligheter och spännande projekt.</p>
+        
+        <div class="contact-grid">
+            <article class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📧</span>
+                <h3>E-post</h3>
+                <a href="mailto:sumeyyesaglamsw@gmail.com">sumeyyesaglamsw@gmail.com</a>
+            </article>
+            <article class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📱</span>
+                <h3>Telefon</h3>
+                <a href="tel:+46764456420">0764456420</a>
+            </article>
+            <article class="contact-item">
+                <span class="contact-icon" aria-hidden="true">📍</span>
+                <h3>Plats</h3>
+                <p>Göteborg, Sverige</p>
+            </article>
+            <article class="contact-item">
+                <span class="contact-icon" aria-hidden="true">💼</span>
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com/in/sumeyye" target="_blank" rel="noopener">linkedin.com/in/sumeyye</a>
+            </article>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
