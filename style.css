@@ -1,4 +1,4 @@
-/* ===== GENEL AYARLAR ===== */
+/* ===== GENERAL SETTINGS ===== */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
 }
 
-/* ===== ANİMASYONLU ARKA PLAN ===== */
+/* ===== ANIMATED BACKGROUND ===== */
 .animated-bg {
     position: fixed;
     top: 0;
@@ -59,7 +59,7 @@ body {
 }
 
 .nav-links {
-    display: flex; /* FLEXBOX KULLANIMI */
+    display: flex; /* FLEXBOX USAGE */
     list-style: none;
     gap: 30px;
     align-items: center;
@@ -87,7 +87,7 @@ body {
 /* ===== HERO SECTION - FLEXBOX ===== */
 .hero {
     min-height: 100vh;
-    display: flex; /* FLEXBOX KULLANIMI */
+    display: flex; /* FLEXBOX USAGE */
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -112,7 +112,7 @@ body {
     background-size: 400% 400%;
     animation: gradientMove 8s ease infinite;
     margin: 0 auto;
-    display: flex; /* FLEXBOX KULLANIMI */
+    display: flex; /* FLEXBOX USAGE */
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 50px rgba(255, 0, 110, 0.5);
@@ -166,7 +166,7 @@ body {
     outline: none;
 }
 
-/* ===== SECTION GENEL AYARLARI ===== */
+/* ===== SECTION GENERAL SETTING ===== */
 .section {
     padding: 100px 50px;
     max-width: 1200px;
@@ -214,7 +214,7 @@ body {
 
 /* ===== SKILLS GRID - CSS GRID ===== */
 .skills-grid {
-    display: grid; /* CSS GRID KULLANIMI */
+    display: grid; /* CSS GRID USAGE */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 50px;
@@ -359,7 +359,7 @@ body {
 
 /* ===== PROJECTS GRID - CSS GRID ===== */
 .projects-grid {
-    display: grid; /* CSS GRID KULLANIMI */
+    display: grid; /* CSS GRID USAGE */
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     margin-top: 50px;
@@ -434,7 +434,7 @@ body {
     border: 1px solid rgba(255, 0, 110, 0.3);
 }
 
-/* ===== BİLDSPEL (SLIDESHOW) - C BETYG İÇİN ===== */
+/* SLIDESHOW */
 .slideshow-container {
     position: relative;
     max-width: 800px;
@@ -546,7 +546,7 @@ body {
 }
 
 .contact-grid {
-    display: grid; /* CSS GRID KULLANIMI */
+    display: grid; /* CSS GRID USAGE */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 50px;
@@ -590,7 +590,7 @@ body {
     outline: none;
 }
 
-/* ===== ANİMASYONLAR ===== */
+/* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -611,7 +611,7 @@ body {
     animation: float 6s ease-in-out infinite;
 }
 
-/* ===== ERİŞİLEBİLİRLİK ===== */
+/* =====ACCESSIBILITY ===== */
 :focus {
     outline: 2px solid #06ffa5;
     outline-offset: 2px;
